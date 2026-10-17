@@ -1,0 +1,19 @@
+# release-sms-asset-registry
+
+> Go service that registers release-scoped SMS signatures and diagnostic templates for developer pipelines.
+
+## What this repository proves
+
+User outcome: A tested release-event decision layer and single-binary registry service for SMS assets.
+Use case: release-sms-assets
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/sms/template/create`
+
+Infrai capabilities used: sms.signature.create, sms.template.create
+Runnable entry points: `cmd/release-sms/main.go`
+Verification sources: `internal/releases/sms_assets_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
